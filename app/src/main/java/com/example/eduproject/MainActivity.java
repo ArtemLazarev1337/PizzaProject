@@ -1,5 +1,6 @@
 package com.example.eduproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -11,7 +12,6 @@ import com.example.eduproject.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
-    private int clicks = 0;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -19,11 +19,8 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.text.setText(Integer.toString(clicks));
-
-        binding.setButton.setOnClickListener(v -> {
-            clicks++;
-            binding.text.setText(Integer.toString(clicks));
+        binding.toAuthButton.setOnClickListener(v -> {
+            startActivity(new Intent(this, AuthActivity.class));
         });
     }
 }

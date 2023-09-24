@@ -4,19 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Text"
-        android:textSize="20sp"
-        android:layout_gravity="center"/>
-
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/setButton"
+        android:id="@+id/toAuthButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Set"
+        android:text="Auth"
         android:layout_marginTop="20dp"
         android:layout_gravity="center" />
 </LinearLayout>
